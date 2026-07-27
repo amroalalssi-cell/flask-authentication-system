@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+
+<body>
+
+<h1>Profile</h1>
+
+<p>
+Full Name:
+{{ user[0] }}
+</p>
+
+<p>
+Username:
+{{ user[1] }}
+</p>
+
+<p>
+Email:
+{{ user[2] }}
+</p>
+
+
+<a href="{{ url_for('auth.dashboard') }}">
+Back Dashboard
+</a>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg,
+            #dfb35a,
+            #464f4f);
+
+}
+
+
+.form-card {
+
+    background: #fff;
+
+    border-radius: 16px;
+
+    padding: 40px;
+
+    width: 90%;
+    max-width: 900px;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+.container {
+
+    display: flex;
+
+    gap: 40px;
+
+}
+
+
+
+.left,
+.right {
+
+    flex: 1;
+
+}
+
+
+
+.left {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+
+.left img {
+
+    width: 150px;
+
+}
+
+
+
+.input-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+
+input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+
+}
+
+
+
+.password {
+
+    position: relative;
+
+}
+
+
+
+.toggle {
+
+    position: absolute;
+
+    right: 12px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    cursor: pointer;
+
+}
+
+
+
+button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #667eea;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+
+.links {
+
+    margin-top: 15px;
+
+    text-align: center;
+
+}
+
+
+
+.links a {
+
+    color: #667eea;
+
+    text-decoration: none;
+
+}
+
+
+
+@media(max-width:700px) {
+
+    .container {
+
+        flex-direction: column;
+
+    }
+
+}

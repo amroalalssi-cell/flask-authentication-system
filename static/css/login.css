@@ -1,0 +1,30 @@
+.left h2 {
+
+    margin-top: 30px;
+
+    color: #007BFF;
+
+    text-align: center;
+
+}
+
+
+.login-title {
+
+    font-size: 28px;
+
+}
+
+
+.login-form {
+
+    width: 100%;
+
+}
+
+
+.login-form button {
+
+    margin-top: 10px;
+
+}
