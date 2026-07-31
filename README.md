@@ -173,4 +173,6 @@ Users table stores:
 
 Amro Alalssi
 
+amroalalssi@gmail.com
+
 Python Flask Developer
