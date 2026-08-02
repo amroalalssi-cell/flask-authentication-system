@@ -6,7 +6,7 @@ A modern authentication system built with **Python, Flask, and SQLite** featurin
 
 📹 Demo Video: `demo/Video Project.mp4`
 
-## 📸 Screenshots
+
 
 
 git clone https://github.com/amroalalssi-cell/flask-authentication-system.git
