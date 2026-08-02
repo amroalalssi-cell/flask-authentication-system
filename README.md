@@ -1,10 +1,20 @@
 # 🔐 Flask Authentication System
 
-A complete authentication system built with **Python Flask** and **SQLite**.
+A modern authentication system built with **Python, Flask, and SQLite** featuring secure user authentication, password recovery, session management, and email verification workflow.
 
-The project implements user registration, login, logout, password reset, sessions, and Two-Factor Authentication (2FA).
+## 🎥 Project Demo
 
+📹 Demo Video: `demo/Video Project.mp4`
+
+## 📸 Screenshots
+
+| Login | Dashboard |
+|--------|-----------|
+| ![Login](screenshots/login.png) | ![Dashboard](screenshots/dashboard.png) |
 ---
+
+git clone https://github.com/amroalalssi-cell/flask-authentication-system.git
+
 
 ## 🚀 Features
 
@@ -61,6 +71,15 @@ auth/
 ```
 
 ---
+## 📦 Requirements
+
+- Python 3.13+
+- Flask
+- Werkzeug
+
+## 📄 License
+
+This project is for educational and portfolio purposes.
 
 ## ⚙️ Installation
 
