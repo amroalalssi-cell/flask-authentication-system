@@ -1,0 +1,49 @@
+/* تحسينات عامة مطابقة لثيم الـ Login */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* ضع نفس لون خلفية مشروعك */
+}
+
+/* حقل إدخال الكود المطور */
+.verification-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 8px; /* يعطي مسافة جمالية بين الأرقام الستة */
+    font-weight: bold;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.verification-input:focus {
+    border-color: #4A90E2; /* يتغير اللون عند الضغط عليه */
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
+}
+
+/* النص التوضيحي تحت العنوان */
+.verify-desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* تنبيه بوجود الكود في الـ Terminal */
+.terminal-alert {
+    background-color: #fcf8e3;
+    border: 1px solid #faebcc;
+    color: #8a6d3b;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 20px;
+}

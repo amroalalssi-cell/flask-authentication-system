@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <!-- ربط ملف الـ CSS الخاص بالداشبورد -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 </head>
-
 <body>
 
+    <!-- 🌟 شريط التنقل العلوي ويحتوي على زر البروفايل وتسجيل الخروج -->
+    <nav class="navbar">
+        <div class="nav-logo">🔒 Security System</div>
+        <div class="nav-links">
+            <a href="{{ url_for('auth.dashboard') }}" class="active">Dashboard</a>
+            <a href="{{ url_for('auth.profile') }}">Profile</a>
+            <a href="{{ url_for('auth.logout') }}" class="logout-btn">Logout</a>
+        </div>
+    </nav>
 
-<h1>Welcome {{ username }}</h1>
-<p>You are logged in successfully</p>
-
-<a href="{{ url_for('auth.logout') }}">
-    Logout
-</a>
-<a href="{{ url_for('auth.profile') }}">
-Profile
-</a>
+    <!-- المحتوى الرئيسي -->
+    <div class="main-container">
+        <div class="content-card">
+            <div style="font-size: 60px; color: #4A90E2; margin-bottom: 20px;">👤</div>
+            <h1>Welcome Back, {{ username }}!</h1>
+            <p style="color: #666; font-size: 16px;">You have successfully completed the 2FA authentication process. Your session is now secure.</p>
+        </div>
+    </div>
 
 </body>
-
 </html>

@@ -1,32 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 </head>
-
 <body>
 
-<h1>Profile</h1>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-logo">🔒 Security System</div>
+        <div class="nav-links">
+            <a href="{{ url_for('auth.dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('auth.profile') }}" class="active">Profile</a>
+            <a href="{{ url_for('auth.logout') }}" class="logout-btn">Logout</a>
+        </div>
+    </nav>
 
-<p>
-Full Name:
-{{ user[0] }}
-</p>
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="content-card">
+            <h2>Account Details</h2>
+            <p style="color: #888;">Here is the information fetched directly from your SQLite database.</p>
 
-<p>
-Username:
-{{ user[1] }}
-</p>
+            {% if user %}
+            <table class="profile-info">
+                <tr>
+                    <td class="label">Full Name:</td>
+                    <td>{{ user[0] }}</td>
+                </tr>
+                <tr>
+                    <td class="label">Username:</td>
+                    <td>{{ user[1] }}</td>
+                </tr>
+                <tr>
+                    <td class="label">Email Address:</td>
+                    <td>{{ user[2] }}</td>
+                </tr>
+            </table>
+            {% else %}
+            <p style="color: red;">Error loading profile data.</p>
+            {% endif %}
 
-<p>
-Email:
-{{ user[2] }}
-</p>
-
-
-<a href="{{ url_for('auth.dashboard') }}">
-Back Dashboard
-</a>
+        </div>
+    </div>
 
 </body>
 </html>

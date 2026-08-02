@@ -1,14 +1,71 @@
-<form method="POST">
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>Enter Verification Code</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Code (2FA)</title>
 
-<input 
-type="text"
-name="code"
-placeholder="6 Digit Code">
+    <!-- ربط ملفات الـ CSS المشتركة والمخصصة -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/verify.css') }}">
+</head>
 
-<button>
-Verify
-</button>
+<body>
 
-</form>
+    <div class="form-card">
+        <div class="container">
+
+            <!-- Left Side (مطابق تماماً لصفحة اللوجن للحفاظ على الهوية البصرية) -->
+            <div class="left">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='images/imag.jpg') }}" alt="Logo">
+                </div>
+                <h2>Security Layer</h2>
+            </div>
+
+            <!-- Right Side (يحتوي على فورم إدخال كود الـ 2FA) -->
+            <div class="right">
+                
+                <form method="POST">
+                    
+                    <h3 style="margin-bottom: 5px; color: #333;">Enter Verification Code</h3>
+                    <p class="verify-desc">Please enter the 6-digit security code generated for your account.</p>
+
+                    <!-- رسالة تنبيهية تذكرك برؤية الكود في الـ Terminal أثناء التطوير -->
+                    <div class="terminal-alert">
+                        💻 Check your **VS Code Terminal** to copy the temporary code.
+                    </div>
+
+                    <div class="input-group">
+                        <input 
+                            type="text"
+                            name="code"
+                            class="verification-input"
+                            placeholder="000000"
+                            maxlength="6"
+                            required
+                            autocomplete="off">
+                    </div>
+
+                    <button type="submit">
+                        Verify & Access
+                    </button>
+
+                    <div class="links">
+                        <a href="{{ url_for('auth.login') }}">
+                            Back to Login
+                        </a>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
