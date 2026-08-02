@@ -8,10 +8,6 @@ A modern authentication system built with **Python, Flask, and SQLite** featurin
 
 ## 📸 Screenshots
 
-| Login | Dashboard |
-|--------|-----------|
-| ![Login](screenshots/login.png) | ![Dashboard](screenshots/regesetr.png) |
----
 
 git clone https://github.com/amroalalssi-cell/flask-authentication-system.git
 
