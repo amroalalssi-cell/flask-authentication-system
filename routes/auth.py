@@ -174,9 +174,7 @@ def logout():
     session.clear()  # تنظيف كافة بيانات الجلسة عند الخروج
     return redirect(url_for("auth.login"))
 
-@app.route("/")
-def home():
-    return redirect("/login")
+
 
 
 @auth.route("/forgot-password", methods=["GET", "POST"])
