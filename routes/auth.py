@@ -12,6 +12,10 @@ DB_PATH = os.path.join(BASE_DIR, "database.db")
 
 auth = Blueprint("auth", __name__)
 
+@auth.route("/")
+def home():
+    return redirect(url_for("auth.login"))
+
 # مدة صلاحية كود الـ 2FA بالثواني (5 دقائق)
 CODE_EXPIRY_SECONDS = 300
 # أقصى عدد محاولات خاطئة لكود الـ 2FA
