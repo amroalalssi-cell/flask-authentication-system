@@ -1,6 +1,6 @@
 import os
 import sqlite3
-from flask import Flask
+from flask import Flask, redirect, url_for
 from routes.auth import auth
 
 app = Flask(__name__)
@@ -12,6 +12,10 @@ app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-only-fallback-key-change-me")
 
 app.register_blueprint(auth)
+
+@app.route("/")
+def index():
+    return redirect(url_for("auth.login"))
 
 
 def init_db():
